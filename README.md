@@ -1,8 +1,14 @@
-# collection of simple backup/restore scripts written in batch
+# collection of simple robocopy backup/restore scripts written in batch
 
 start all or individually
 
 ```
+e.g. default:
+
+if not defined BACKUPPATH (
+set BACKUPPATH=D:\backup\01backups
+)
+
 start-backup.bat
 start-restore.bat
 ```

@@ -5,7 +5,9 @@ set CURRENTTIME=%TIME::=-%
 REM HH.MM.SS
 set CURRENTTIME=%CURRENTTIME:~0,8%
 REM path to backuplocation
+if not defined BACKUPPATH (
 set BACKUPPATH=D:\backup\01backups
+)
 REM folder to backup
 set FOLDER=Buhl
 set SOURCEDIR=%LOCALAPPDATA%\%FOLDER%
