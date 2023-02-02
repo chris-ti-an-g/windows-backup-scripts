@@ -31,22 +31,22 @@ start-restore.bat
 00backupscripts\02firefox_profile.bat
 ```
 
+## Librewolf Profile
+
+```
+00backupscripts\03librewolf_profile.bat
+```
+
 ## EMDB
 
 ```
-00backupscripts\03emdb.bat
+00backupscripts\04emdb.bat
 ```
 
 ## WISO
 
 ```
-00backupscripts\04wiso.bat
-```
-
-## Factorio
-
-```
-00backupscripts\05factorio.bat
+00backupscripts\05wiso.bat
 ```
 
 ## qTox
@@ -59,4 +59,10 @@ start-restore.bat
 
 ```
 00backupscripts\07savegames.bat
+```
+
+## Factorio
+
+```
+00backupscripts\08factorio.bat
 ```
