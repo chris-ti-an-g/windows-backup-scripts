@@ -47,3 +47,10 @@ set TARGETDIR=%BACKUPPATH%\Savegames\%FOLDER%
 mkdir "%TARGETDIR%"
 REM %FOLDER%
 robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\..\%DATE%-%CURRENTTIME%.txt" /TEE
+REM folder to backup
+set FOLDER=Goldberg SteamEmu Saves
+set SOURCEDIR=%APPDATA%\%FOLDER%
+set TARGETDIR=%BACKUPPATH%\Savegames\%FOLDER%
+mkdir "%TARGETDIR%"
+REM %FOLDER%
+robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\..\%DATE%-%CURRENTTIME%.txt" /TEE
