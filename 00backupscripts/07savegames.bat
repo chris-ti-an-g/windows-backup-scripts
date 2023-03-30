@@ -12,6 +12,8 @@ REM path to backuplocation
 if not defined BACKUPPATH (
 set BACKUPPATH=D:\backup\01backups
 )
+REM APPDATA = c:\Users\%USER%\AppData\Roaming\
+REM LOCALAPPDATA = c:\Users\%USER%\AppData\Local\
 REM folder to backup
 set FOLDER=EMPRESS
 set SOURCEDIR=%PUBLIC%\Documents\%FOLDER%
@@ -49,6 +51,20 @@ REM %FOLDER%
 robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\..\%DATE%-%CURRENTTIME%.txt" /TEE
 REM folder to backup
 set FOLDER=Goldberg SteamEmu Saves
+set SOURCEDIR=%APPDATA%\%FOLDER%
+set TARGETDIR=%BACKUPPATH%\Savegames\%FOLDER%
+mkdir "%TARGETDIR%"
+REM %FOLDER%
+robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\..\%DATE%-%CURRENTTIME%.txt" /TEE
+REM folder to backup
+set FOLDER=Phoenix
+set SOURCEDIR=%LOCALAPPDATA%\%FOLDER%
+set TARGETDIR=%BACKUPPATH%\Savegames\%FOLDER%
+mkdir "%TARGETDIR%"
+REM %FOLDER%
+robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\..\%DATE%-%CURRENTTIME%.txt" /TEE
+REM folder to backup
+set FOLDER=Factorio
 set SOURCEDIR=%APPDATA%\%FOLDER%
 set TARGETDIR=%BACKUPPATH%\Savegames\%FOLDER%
 mkdir "%TARGETDIR%"

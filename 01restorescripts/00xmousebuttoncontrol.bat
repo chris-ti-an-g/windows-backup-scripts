@@ -8,6 +8,8 @@ REM path to backuplocation
 if not defined BACKUPPATH (
 set BACKUPPATH=D:\backup\01backups
 )
+REM APPDATA = c:\Users\%USER%\AppData\Roaming\
+REM LOCALAPPDATA = c:\Users\%USER%\AppData\Local\
 REM folder to backup
 set FOLDER=Highresolution Enterprises\XMouseButtonControl
 set TARGETDIR=%APPDATA%\%FOLDER%
