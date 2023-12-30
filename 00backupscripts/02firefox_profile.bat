@@ -16,11 +16,11 @@ set SOURCEDIR=%APPDATA%\Mozilla\Firefox\Profiles
 set TARGETDIR=%BACKUPPATH%\Firefox\%FOLDER%
 mkdir %TARGETDIR%
 REM %FOLDER%
-robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\%DATE%-%CURRENTTIME%".txt /TEE /XD "storage"
+robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /XD "storage" /LOG+:"%TARGETDIR%\%DATE%-%CURRENTTIME%".txt /TEE
 REM folder to backup
 set FOLDER=Local
 set SOURCEDIR=%LOCALAPPDATA%\Mozilla\Firefox\Profiles
 set TARGETDIR=%BACKUPPATH%\Firefox\%FOLDER%
 mkdir %TARGETDIR%
 REM %FOLDER%
-robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR /LOG+:"%TARGETDIR%\%DATE%-%CURRENTTIME%".txt /TEE /XD "cache2"
+robocopy "%SOURCEDIR%" "%TARGETDIR%" /E /W:5 /R:2 /COPY:DAT /MIR  /XD "cache2" /LOG+:"%TARGETDIR%\%DATE%-%CURRENTTIME%".txt /TEE
